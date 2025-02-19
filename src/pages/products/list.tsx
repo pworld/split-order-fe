@@ -134,7 +134,7 @@ const ProductList = () => {
         packages.map((pkg, index) => (
           <Card key={index} style={{ padding: "10px", marginBottom: "16px" }}>
             <p><strong>Package {index + 1}</strong></p>
-            <p><strong>Items:</strong> {pkg.items.map((item) => `Item ${item.id}`).join(", ")}</p>
+            <p><strong>Items:</strong> {pkg.items.map((item) => `${item.name}`).join(", ")}</p>
             <p><strong>Total Price:</strong> ${pkg.totalPrice}</p>
             <p><strong>Total Weight:</strong> {pkg.totalWeight}g</p>
             <p><strong>Courier Charge:</strong> ${pkg.courierCharge}</p>
