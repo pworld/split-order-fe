@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Package, Product } from "../../model/types";
 
-const API_URL = "http://localhost:3001/api";
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 // Fetch all products
 export const fetchProducts = async (): Promise<Product[]> => {

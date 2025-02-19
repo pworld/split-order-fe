@@ -1,6 +1,4 @@
-import { GitHubBanner, Refine } from "@refinedev/core";
-import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
-import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
+import { Refine } from "@refinedev/core";
 
 import {
   ErrorComponent,
@@ -26,13 +24,12 @@ import ProductList from "./pages/products/list";
 function App() {
   return (
     <BrowserRouter>
-      <GitHubBanner />
-      <RefineKbarProvider>
+
         <ColorModeContextProvider>
           <CssBaseline />
           <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
           <RefineSnackbarProvider>
-            <DevtoolsProvider>
+
               <Refine
                 dataProvider={dataProvider("http:localhost:3001/api")}
                 notificationProvider={useNotificationProvider}
@@ -72,15 +69,12 @@ function App() {
                   </Route>
                 </Routes>
 
-                <RefineKbar />
                 <UnsavedChangesNotifier />
                 <DocumentTitleHandler />
               </Refine>
-              <DevtoolsPanel />
-            </DevtoolsProvider>
+
           </RefineSnackbarProvider>
         </ColorModeContextProvider>
-      </RefineKbarProvider>
     </BrowserRouter>
   );
 }

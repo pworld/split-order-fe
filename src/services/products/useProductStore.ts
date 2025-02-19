@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export const useOrderStore = () => {
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
+  const [packages, setPackages] = useState([]);
   
   const addItem = (id: number) => {
     setSelectedItems((prev) => [...prev, id]);
@@ -13,6 +14,7 @@ export const useOrderStore = () => {
 
   const clearSelection = () => {
     setSelectedItems([]);
+    setPackages([]);
   };
 
   return { selectedItems, addItem, removeItem, clearSelection };
