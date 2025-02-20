@@ -22,6 +22,12 @@ import { ColorModeContextProvider } from "./contexts/color-mode";
 import ProductList from "./pages/products/list";
 
 function App() {
+  const CustomTitle = () => (
+    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+      <span>Split Order App</span> {/* Change to your app title */}
+    </div>
+  );
+
   return (
     <BrowserRouter>
 
@@ -53,7 +59,7 @@ function App() {
                 <Routes>
                   <Route
                     element={
-                      <ThemedLayoutV2 Header={() => <Header sticky />}>
+                      <ThemedLayoutV2 Header={() => <Header sticky />} Title={CustomTitle}>
                         <Outlet />
                       </ThemedLayoutV2>
                     }
