@@ -24,7 +24,7 @@ import ProductList from "./pages/products/list";
 function App() {
   const CustomTitle = () => (
     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-      <span>Split Order App</span> {/* Change to your app title */}
+      <h3>Split Order App</h3>
     </div>
   );
 
